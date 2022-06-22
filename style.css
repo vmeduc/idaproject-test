@@ -1,0 +1,31 @@
+body, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro';
+}
+
+body {
+  background-color: #cccbc9;
+}
+
+#app {
+  margin: 32px;
+}
+
+.main {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* mixins */
+
+.product-form, .product-card {
+  box-shadow: 
+    0px 20px 30px rgba(0, 0, 0, 0.04), 
+    0px 6px 10px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_top.css">
+  <link rel="stylesheet" href="style_form.css">
+  <link rel="stylesheet" href="style_product.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+
+    <div class="top">
+      <h1 class="top__title">Добавление товара</h1>
+      <select class="top__filter-selector">
+        <option value="default">По умолчанию</option>
+        <option value="by_price">По цене</option>
+        <option value="by_name">По имени</option>
+      </select>
+    </div>
+
+    <div class="main">
+
+      <div class="sidebar">
+        <form class="product-form">
+          <div class="product-form__main">
+            <div class="product-form__line">
+              <label class="product-form__label" for="product-name">
+                Наименование товара <div class="required-sign"></div>
+              </label>
+              <input class="product-form__input" type="text" id="product-name" placeholder="Введите наименование товара"
+                required />
+            </div>
+            <div class="product-form__line">
+              <label class="product-form__label" for="product-description">
+                Описание товара
+              </label>
+              <textarea class="product-form__textarea" type="text" id="product-description"
+                placeholder="Введите описание товара"></textarea>
+            </div>
+            <div class="product-form__line">
+              <label class="product-form__label" for="product-image-link">
+                Ссылка на изображение товара <div class="required-sign"></div>
+              </label>
+              <input class="product-form__input" type="text" id="product-image-link" placeholder="Введите ссылку"
+                required />
+            </div>
+            <div class="product-form__line">
+              <label class="product-form__label" for="product-price">
+                Цена товара <div class="required-sign"></div>
+              </label>
+              <input class="product-form__input" type="text" id="product-price" placeholder="Введите цену" required />
+            </div>
+          </div>
+          <div class="product-form__actions">
+            <button class="product-form__button" type="submit">Добавить товар</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="https://zor.uz/pics/oi/2020/09/5417585_m.jpg" alt="Product">
+          </div>
+          <div class="product-card__main">
+            <h3 class="product-card__title">Наименование товара</h3>
+            <div class="product-card__text">Довольно-таки интересное описание товара в несколько строк. Довольно-таки
+              интересное
+              описание товара в несколько строк</div>
+          </div>
+          <h2 class="product-card__price">10 000 руб.</h2>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="https://zor.uz/pics/oi/2020/09/5417585_m.jpg" alt="Product">
+          </div>
+          <div class="product-card__main">
+            <h3 class="product-card__title">Наименование товара</h3>
+            <div class="product-card__text">Довольно-таки интересное описание товара в несколько строк. Довольно-таки
+              интересное
+              описание товара в несколько строк</div>
+          </div>
+          <h2 class="product-card__price">10 000 руб.</h2>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="https://zor.uz/pics/oi/2020/09/5417585_m.jpg" alt="Product">
+          </div>
+          <div class="product-card__main">
+            <h3 class="product-card__title">Наименование товара</h3>
+            <div class="product-card__text">Довольно-таки интересное описание товара в несколько строк. Довольно-таки
+              интересное
+              описание товара в несколько строк</div>
+          </div>
+          <h2 class="product-card__price">10 000 руб.</h2>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="https://zor.uz/pics/oi/2020/09/5417585_m.jpg" alt="Product">
+          </div>
+          <div class="product-card__main">
+            <h3 class="product-card__title">Наименование товара</h3>
+            <div class="product-card__text">Довольно-таки интересное описание товара в несколько строк. Довольно-таки
+              интересное
+              описание товара в несколько строк</div>
+          </div>
+          <h2 class="product-card__price">10 000 руб.</h2>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__image">
+            <img src="https://zor.uz/pics/oi/2020/09/5417585_m.jpg" alt="Product">
+          </div>
+          <div class="product-card__main">
+            <h3 class="product-card__title">Наименование товара</h3>
+            <div class="product-card__text">Довольно-таки интересное описание товара в несколько строк. Довольно-таки
+              интересное
+              описание товара в несколько строк</div>
+          </div>
+          <h2 class="product-card__price">10 000 руб.</h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
