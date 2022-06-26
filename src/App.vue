@@ -3,7 +3,7 @@
     <Top />
     <div class="main">
       <div class="sidebar">
-        <ProductForm />
+        <ProductForm @addProduct="onAddProduct" />
       </div>
       <div class="grid">
         <ProductCard v-for="p in productList" :product="p" :key="p.id" />
@@ -27,31 +27,34 @@ export default {
     return {
       productList: [
         {
-          id: 1,
+          id: 0,
           name: "iPhone 5",
           price: "10 000 руб.",
-          image: "https://zor.uz/pics/oi/2020/09/5417585_m.jpg",
-          text: "iPhone 5 — смартфон компании Apple, представляет шестое поколение iPhone.",
-        },
-        {
-          id: 2,
-          name: "iPhone 5",
-          price: "10 000 руб.",
-          image: "https://zor.uz/pics/oi/2020/09/5417585_m.jpg",
-          text: "iPhone 5 — смартфон компании Apple, представляет шестое поколение iPhone.",
-        },
-        {
-          id: 3,
-          name: "iPhone 5",
-          price: "10 000 руб.",
-          image: "https://zor.uz/pics/oi/2020/09/5417585_m.jpg",
+          image: "https://vseotzyvy.ru/media/review_images/1601750765.jpg",
           text: "iPhone 5 — смартфон компании Apple, представляет шестое поколение iPhone.",
         },
       ],
-      currentId: 1,
+      currentId: 0,
     };
   },
-  
+  methods: {
+    onAddProduct(product) {
+      if (this.validate(product)) {
+        product.id = this.nextId();
+        this.productList.push(product);
+        this.$nextTick(() => window.scrollTo(0, document.body.scrollHeight));
+      } else {
+        alert("Не все обязательные поля заполнены")
+      }
+    },
+    nextId() {
+      return ++this.currentId;
+    },
+    validate(product) {
+      return (product.name && product.price && product.image)
+    }
+  },
+
 };
 </script>
 
@@ -65,6 +68,11 @@ export default {
   gap: 16px;
   margin-top: 16px;
 }
+@media (max-width: 760px) {
+  .main {
+    flex-direction: column;
+  }
+}
 
 .grid {
   display: grid;
@@ -76,13 +84,9 @@ export default {
     grid-template: "a b";
   }
 }
-
-/* mixins */
-
-.product-form,
-.product-card {
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04),
-    0px 6px 10px rgba(0, 0, 0, 0.02);
-  border-radius: 4px;
+@media (max-width: 1090px) {
+  .grid {
+    grid-template: "a";
+  }
 }
 </style>

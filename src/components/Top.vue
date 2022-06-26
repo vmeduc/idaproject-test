@@ -1,21 +1,14 @@
 <template>
   <div class="top">
     <h1 class="top__title">Добавление товара</h1>
-    <select class="top__filter-selector">
+    <select class="top__filter-selector" onchange="alert('Функционал не реализован')">
       <option value="default">По умолчанию</option>
       <option value="price">По цене</option>
-      <option value="name">По имени</option>
     </select>
   </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
-<style>
+<style scoped>
 .top {
   display: flex;
   justify-content: space-between;

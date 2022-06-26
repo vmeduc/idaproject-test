@@ -22,13 +22,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .product-card {
   width: 332px;
   height: 423px;
   background-color: #fffefb;
   color: #3F3F3F;
   overflow: hidden;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04),
+    0px 6px 10px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
 }
 
 .product-card__image {
@@ -39,6 +42,7 @@ export default {
 .product-card__image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .product-card__main {
